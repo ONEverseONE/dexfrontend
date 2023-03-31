@@ -89,7 +89,7 @@ export const SearchInput = styled.input`
 export default function Earn() {
   const { chainId, account } = useActiveWeb3React()
   const govToken = useGovernanceToken()
-  const activePoolsOnly = true
+  const activePoolsOnly = false
   const stakingInfos = useDefaultStakingPools(activePoolsOnly)
 
   // States

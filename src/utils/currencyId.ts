@@ -5,6 +5,7 @@ export function currencyId(currency: Currency): any {
   if (currency && DEFAULT_CURRENCIES.includes(currency)) {
     return BASE_CURRENCY && BASE_CURRENCY.symbol ? BASE_CURRENCY.address : 'FRA'
   }
+  if (currency.symbol == 'OV') return currency.address
   if (currency instanceof Token) return currency.address
   throw new Error('invalid currency')
 }
